@@ -6,7 +6,7 @@ __all__ = ["spectral"]
 
 import pkg_resources
 
-from bapsflib import (spectral)
+from bmplib import (spectral)
 
 # --- Define version -----------------------------------------------------------
 try:

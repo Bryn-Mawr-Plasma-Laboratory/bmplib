@@ -11,4 +11,4 @@ The spectral analysis subpackage
 """
 __all__ = ["spectrum_wwind"]
 
-from plasmapy.spectral import spectrum_wwind
+from bmplib.spectral import spectrum_wwind
