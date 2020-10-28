@@ -2,11 +2,11 @@
 # Bryn Mawr Plasma Laboratory at Bryn Mawr College.
 #
 
-__all__ = ["spectral"]
+__all__ = ["spectral", "utils"]
 
 import pkg_resources
 
-from bmplib import (spectral)
+from bmplib import (spectral, utils)
 
 # --- Define version -----------------------------------------------------------
 try:
