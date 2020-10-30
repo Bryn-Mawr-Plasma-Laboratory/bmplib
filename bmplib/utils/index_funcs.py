@@ -9,6 +9,8 @@ def tindex(timearr, timevalue, delta=2e-2):
         timearr: numpy array of time values
         timevalue: time value of interest
         delta: residual error for time value
+    Outputs: tind
+        tind: the index of corresponding to timevalue
     """
     tind = where(abs((timearr)-(timevalue)) < delta)
     tind = tind[0][0]
