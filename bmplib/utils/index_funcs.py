@@ -29,9 +29,15 @@ def tindex_near(timearr, timevalue, threshold):
     return tinds
 
 
-def firstzero(timearr, timevalue):
+def firstzero(timearr):
+    """ The first zero
+    Inputs: timearr
+        timearr: numpy array
+    Outputs: tind
+        zind: index of the first zero in timearr
+    """
     for n in range(len(timearr)):
-        tind = n
+        zind = n
         if timearr[n] < 0:
             break
-    return tind
+    return zind
