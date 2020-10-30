@@ -3,7 +3,7 @@
 from numpy import where, abs, min
 
 
-def tindex(timearr, timevalue, delta=2e-2):
+def tindex(time_arr, time_value, delta=2e-2):
     """ Outputs the index of given timevalue
     Inputs: timearr, timevalue, delta
         timearr: numpy array of time values
@@ -12,32 +12,32 @@ def tindex(timearr, timevalue, delta=2e-2):
     Outputs: tind
         tind: the index of corresponding to timevalue
     """
-    tind = where(abs((timearr)-(timevalue)) < delta)
+    tind = where(abs((time_arr)-(time_value)) < delta)
     tind = tind[0][0]
     return tind
 
 
-def tindex_min(timearr, timevalue):
-    minval = min(abs((timearr)-timevalue))
-    tind = where(abs((timearr)-(timevalue)) == minval)
+def tindex_min(time_arr, time_value):
+    min_val = min(abs((time_arr)-time_value))
+    tind = where(abs((time_arr)-(time_value)) == min_val)
     tind = tind[0][0]
     return tind
 
 
-def tindex_near(timearr, timevalue, threshold):
-    tinds = where(abs(timearr-timevalue) < threshold)
+def tindex_near(time_arr, time_value, threshold):
+    tinds = where(abs(time_arr-time_value) < threshold)
     return tinds
 
 
-def firstzero(timearr):
+def first_zero(time_arr):
     """ The first zero
     Inputs: timearr
         timearr: numpy array
     Outputs: tind
         zind: index of the first zero in timearr
     """
-    for n in range(len(timearr)):
+    for n in range(len(time_arr)):
         zind = n
-        if timearr[n] < 0:
+        if time_arr[n] < 0:
             break
     return zind
