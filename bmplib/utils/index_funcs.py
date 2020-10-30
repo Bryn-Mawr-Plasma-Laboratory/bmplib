@@ -4,6 +4,12 @@ from numpy import where, abs, min
 
 
 def tindex(timearr, timevalue, delta=2e-2):
+    """ Outputs the index of given timevalue
+    Inputs: timearr, timevalue, delta
+        timearr: numpy array of time values
+        timevalue: time value of interest
+        delta: residual error for time value
+    """
     tind = where(abs((timearr)-(timevalue)) < delta)
     tind = tind[0][0]
     return tind
