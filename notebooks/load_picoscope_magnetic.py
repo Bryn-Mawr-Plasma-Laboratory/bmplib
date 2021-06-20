@@ -2,20 +2,19 @@
 
 import numpy as np
 import scipy.integrate as sp
-from scipy.interpolate import interp1d
 import matplotlib.pylab as plt
 
 #data = '061615'
 #shot = 1
 #time_range = [20.0,80.0] #in us
 
-def load_picoscope_magnetic(date,shot_number,time_range=[20.0,80.0],location='\\data\\',plot=True):
+def load_picoscope_magnetic(date,shot_number,time_range=[20.0,80.0],plot=True):
 
     #load file
     filename='picoscope_'+date+'r ('
     
     Btotave = np.zeros([25003])
-    data = np.loadtxt(location+filename+str(shot_number)+').txt',skiprows=2,unpack=True)
+    data = np.loadtxt(filename+str(shot_number)+').txt',skiprows=2,unpack=True)
     
     #timerange 
     time = data[0,:]
