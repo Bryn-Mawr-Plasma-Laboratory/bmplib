@@ -9,6 +9,6 @@
 """
 The spectral analysis subpackage
 """
-__all__ = ["spectrum_wwind"]
+__all__ = ["spectral_functions"]
 
-from bmplib.spectral import spectrum_wwind
+from bmplib.spectral import spectral_functions
